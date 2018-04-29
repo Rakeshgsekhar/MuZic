@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/muzicbackground"
+    android:padding="10dp"
+    tools:context="com.webatron.rakesh.muzic.MainActivity">
+
+    <TextView
+        android:textColor="#ffff"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/logotext"
+        android:text="MuZic"
+        android:textSize="30sp"/>
+    <RelativeLayout
+        android:layout_below="@+id/logotext"
+        android:id="@+id/buttonlayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/previous"
+            android:src="@drawable/ic_skip_previous_black_24dp"/>
+        <ImageButton
+            android:id="@+id/pause"
+            android:layout_toRightOf="@id/previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:src="@drawable/ic_pause_black_24dp"/>
+        <ImageButton
+            android:id="@+id/play"
+            android:layout_toRightOf="@id/previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_play_arrow_black_24dp"/>
+        <ImageButton
+            android:layout_toRightOf="@id/play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_skip_next_black_24dp"
+            android:id="@+id/next"/>
+
+    </RelativeLayout>
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/seekbar"
+        android:layout_below="@id/buttonlayout"/>
+
+    <TextView
+        android:textColor="#ffffff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/starttime"
+        android:layout_below="@id/seekbar"
+        android:text="00:00"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:textColor="#ffffff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/finishtime"
+        android:layout_below="@id/seekbar"
+        android:text="00:00"
+        android:layout_alignParentRight="true"/>
+</RelativeLayout>

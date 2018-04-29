@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/muzicbackground"
+    tools:context="com.webatron.rakesh.muzic.SongsList">
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/songlist"
+        android:layout_height="match_parent"
+        android:layout_above="@id/form"/>
+
+    <RelativeLayout
+        android:id="@+id/form"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:orientation="horizontal"
+        android:background="#ea0707"
+        android:paddingBottom="2dp">
+
+        <ImageButton
+            android:id="@+id/prev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_skip_previous_black_24dp"
+            android:layout_marginRight="20dp"/>
+        <ImageButton
+            android:layout_toRightOf="@id/prev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playsong"
+            android:src="@drawable/ic_play_arrow_black_24dp"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/prev"
+            android:src="@drawable/ic_pause_black_24dp"
+            android:id="@+id/pusesong"/>
+        <ImageButton
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/playsong"
+            android:src="@drawable/ic_skip_next_black_24dp"
+            android:id="@+id/nextsong"/>
+    </RelativeLayout>
+</RelativeLayout>
